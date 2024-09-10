@@ -24,5 +24,11 @@ class Assets {
   static const String poppinsPoppinsSemiBoldItalic = 'assets/fonts/poppins/Poppins-SemiBoldItalic.ttf';
   static const String poppinsPoppinsThin = 'assets/fonts/poppins/Poppins-Thin.ttf';
   static const String poppinsPoppinsThinItalic = 'assets/fonts/poppins/Poppins-ThinItalic.ttf';
+  static const String svgBooks = 'assets/images/svg/books.svg';
+  static const String svgDashBoard = 'assets/images/svg/dash_board.svg';
+  static const String svgDate = 'assets/images/svg/date.svg';
+  static const String svgExplore = 'assets/images/svg/explore.svg';
+  static const String svgSetting = 'assets/images/svg/setting.svg';
+  static const String svgSubtract = 'assets/images/svg/log_out.svg';
 
 }
