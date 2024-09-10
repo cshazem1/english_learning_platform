@@ -14,7 +14,7 @@ class DashBoardViews extends StatelessWidget {
          Shadow(color: Colors.white.withOpacity(0.4),padding: 0.08,),
 
         Shadow(
-          color: Colors.white.withOpacity(0.6),
+          color: Colors.white,
           padding: 0.16,
           child: AdaptiveLayout(
               mobileLayout: (context) => const Text("data"),
