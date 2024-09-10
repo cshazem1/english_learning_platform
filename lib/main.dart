@@ -1,5 +1,5 @@
 import 'package:english_learning_platform/core/utils/colors.dart';
-import 'package:english_learning_platform/features/dash_board/presentation/views/dash_board_views.dart';
+import 'package:english_learning_platform/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(scaffoldBackgroundColor: ColorManager.backGround),
 
         debugShowCheckedModeBanner: false,
-        home: const DashBoardViews());
+        home: const HomeView());
   }
 }

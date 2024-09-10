@@ -34,7 +34,7 @@ class InActiveDrawerItem extends StatelessWidget {
             style: AppStyles.styleMedium14.copyWith(color: Colors.white),
           ),
           leading: SvgPicture.asset(
-            drawerItems.image,
+            drawerItems.image,colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
           )),
     );
   }

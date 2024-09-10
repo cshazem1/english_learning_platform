@@ -1,9 +1,9 @@
-import 'package:english_learning_platform/features/dash_board/presentation/views/widgets/adaptive_layout.dart';
-import 'package:english_learning_platform/features/dash_board/presentation/views/widgets/web_layout_view.dart';
+import 'package:english_learning_platform/features/home/presentation/views/widgets/adaptive_layout.dart';
+import 'package:english_learning_platform/features/home/presentation/views/widgets/home_web_layout_view.dart';
 import 'package:flutter/material.dart';
 
-class DashBoardViews extends StatelessWidget {
-  const DashBoardViews({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class DashBoardViews extends StatelessWidget {
          Shadow(color: Colors.white.withOpacity(0.4),padding: 0.08,),
 
         Shadow(
-          color: Colors.white,
+          color:  Color(0xffF1F3F8),
           padding: 0.16,
           child: AdaptiveLayout(
               mobileLayout: (context) => const Text("data"),
               tabletLayout: (context) => const Text("dsd"),
-              webLayout: (context) => const WebLayoutView()),
+              webLayout: (context) => const HomeWebLayoutView()),
         ),
       ],
     ));
