@@ -1,4 +1,5 @@
-import 'package:english_learning_platform/features/dash_board/presentation/views/widgets/dash_board_views.dart';
+import 'package:english_learning_platform/core/utils/colors.dart';
+import 'package:english_learning_platform/features/dash_board/presentation/views/dash_board_views.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: ColorManager.backGround),
+
         debugShowCheckedModeBanner: false,
-        home: DashBoardViews());
+        home: const DashBoardViews());
   }
 }
