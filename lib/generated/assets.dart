@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String imagesBook = 'assets/images/book.png';
+  static const String imagesClock = 'assets/images/clock.png';
   static const String imagesCountries1 = 'assets/images/countries1.png';
   static const String imagesMagnifier = 'assets/images/magnifier.png';
   static const String poppinsOFL = 'assets/fonts/poppins/OFL.txt';
@@ -28,7 +29,8 @@ class Assets {
   static const String svgDashBoard = 'assets/images/svg/dash_board.svg';
   static const String svgDate = 'assets/images/svg/date.svg';
   static const String svgExplore = 'assets/images/svg/explore.svg';
+  static const String svgHeart = 'assets/images/svg/heart.svg';
+  static const String svgLogOut = 'assets/images/svg/log_out.svg';
   static const String svgSetting = 'assets/images/svg/setting.svg';
-  static const String svgSubtract = 'assets/images/svg/log_out.svg';
 
 }

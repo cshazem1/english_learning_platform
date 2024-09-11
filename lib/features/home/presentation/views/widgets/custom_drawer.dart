@@ -54,7 +54,7 @@ class CustomDrawer extends StatelessWidget {
                     InActiveDrawerItem(
                       intTopPosition: -1,
                       drawerItems: DrawerItemModels(
-                          title: "Log Out", image: Assets.svgSubtract),
+                          title: "Log Out", image: Assets.svgLogOut),
                     ),
                   ],
                 ),
