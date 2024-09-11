@@ -13,35 +13,40 @@ class DashBoardHeader extends StatelessWidget {
       children: [
         Expanded(
           child: Row(children: [
-            const Icon(
-              Icons.arrow_back_ios_new,
-              color: Colors.grey,
+            const FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.grey,
+              ),
             ),
             Transform.rotate(
-                angle: -3.14, child: const Icon(Icons.arrow_back_ios_new)),
+                angle: -3.14, child: const FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Icon(Icons.arrow_back_ios_new))),
           ]),
         ),
-        const Expanded(flex: 4, child: DashBoardSearch()),
+        const Expanded(flex: 3, child: DashBoardSearch()),
         Expanded(
           flex: 2,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
+                padding: const EdgeInsets.all(10),
+
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                     color: Colors.white),
-                width: 50,
-                height: 50,
+
                 child: const Icon(Icons.message_outlined),
               ),
-              const SizedBox(width: 10,),
               Container(
+                padding: const EdgeInsets.all(10),
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                     color: Colors.white),
-                width: 50,
-                height: 50,
+               
                 child: const Icon(Icons.notification_add),
               ),
             ],

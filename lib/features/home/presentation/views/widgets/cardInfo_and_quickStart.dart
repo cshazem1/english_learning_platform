@@ -16,7 +16,7 @@ class CardInfoAndQuickStart extends StatelessWidget {
         CustomCardInfo(),
         SizedBox(
 
-          height: 90,
+          height: 100,
         ),
         QuickStart()
       ],

@@ -20,7 +20,7 @@ class WordSets extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        WordSetsListView()
+        const WordSetsListView()
       ],
     );
   }

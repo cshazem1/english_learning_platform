@@ -20,7 +20,7 @@ class ActiveDrawerItem extends StatelessWidget {
       decoration: const BoxDecoration(
           color: Color(0xffF1F3F8),
           borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20), topLeft: Radius.circular(20))),
+              bottomLeft: Radius.circular(20), topLeft: Radius.circular(20),topRight: Radius.circular(20),bottomRight: Radius.circular(20))),
       child: ListTile(
           contentPadding: EdgeInsets.zero,
           title: FittedBox(

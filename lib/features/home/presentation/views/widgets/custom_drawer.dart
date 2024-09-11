@@ -12,69 +12,74 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(borderRadius: BorderRadiusDirectional.circular(20)),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Padding(
-            padding:
-                EdgeInsets.only(right: MediaQuery.sizeOf(context).width * 0.015),
-            child: Container(
-              height: MediaQuery.sizeOf(context).height,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                color: Color(0xff403752),
-              ),
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Padding(
+          padding:
+              EdgeInsets.only(right: MediaQuery.sizeOf(context).width * 0.015),
+          child: Container(
+            height: MediaQuery.sizeOf(context).height,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              color: Color(0xff403752),
             ),
           ),
-          CustomScrollView(
-      
-            slivers: [
-              const DrawerListViewItems(),
-      
-               SliverToBoxAdapter(
-                  child: Container(
-                    color: const Color(0xff403752),
-                    child: const Divider(
-                                  indent: 30,
-                                  endIndent: 30,
-                                ),
-                  )),
-              SliverFillRemaining(
-                hasScrollBody: false,
-                child: Column(
-                  children: [
-                    const Expanded(child: SizedBox()),
-                    InActiveDrawerItem(
-                      intTopPosition: -1,
-                      drawerItems: DrawerItemModels(
-                          title: "Settings", image: Assets.svgSetting),
-                    ),
-                    InActiveDrawerItem(
-                      intTopPosition: -1,
-                      drawerItems: DrawerItemModels(
-                          title: "Log Out", image: Assets.svgLogOut),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          Positioned(
-            top: -65,
-            left: -30,
-            child: Transform.rotate(
-                angle: -0.2,
-                child: Image.asset(
-                  Assets.imagesMagnifier,
-                  fit: BoxFit.fill,
-                  height: 200,
-                  width: 200,
+        ),
+        CustomScrollView(
+
+          slivers: [
+            const DrawerListViewItems(),
+
+             SliverToBoxAdapter(
+                child: Container(
+                  color: const Color(0xff403752),
+                  child: const Divider(
+                                indent: 30,
+                                endIndent: 30,
+                              ),
                 )),
-          ),
-        ],
-      ),
+            SliverToBoxAdapter(
+              child: InActiveDrawerItem(
+                intTopPosition: -1,
+                drawerItems: DrawerItemModels(
+                    title: "", image: ""),
+              ),
+            ),
+
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  const Expanded(child: SizedBox()),
+                  InActiveDrawerItem(
+                    intTopPosition: -1,
+                    drawerItems: DrawerItemModels(
+                        title: "Settings", image: Assets.svgSetting),
+                  ),
+                  InActiveDrawerItem(
+                    intTopPosition: -1,
+                    drawerItems: DrawerItemModels(
+                        title: "Log Out", image: Assets.svgLogOut),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+        Positioned(
+          top: -65,
+          left: -MediaQuery.sizeOf(context).width * 0.008,
+          child: Transform.rotate(
+              angle: -0.2,
+              child: Image.asset(
+                Assets.imagesMagnifier,
+                fit: BoxFit.fill,
+                height: 200,
+                width: 200,
+              )),
+        ),
+      ],
     );
   }
 }

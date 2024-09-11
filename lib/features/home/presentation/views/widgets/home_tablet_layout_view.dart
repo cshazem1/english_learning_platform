@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import 'quick_start.dart';
 
-class HomeMobileLayoutView extends StatelessWidget {
-  const HomeMobileLayoutView({super.key});
+class HomeTabletLayoutView extends StatelessWidget {
+  const HomeTabletLayoutView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +14,35 @@ class HomeMobileLayoutView extends StatelessWidget {
       Expanded(
         child: CustomDrawer(),
       ),
+      SizedBox(width: 22,),
       Expanded(
           flex: 3,
           child:
-          SingleChildScrollView(child: Column(
-            children: [
-              CustomCardInfo(),
-
-              HeaderAndWordsAndStatistics(),
-
-              QuickStart(),
-
-            ],
-          ))),
+          HomeMobileLayout()),
     ],
     );
 
+  }
+}
+
+class HomeMobileLayout extends StatelessWidget {
+  const HomeMobileLayout({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          CustomCardInfo(),
+      SizedBox(height: 150,),
+          HeaderAndWordsAndStatistics(),
+      SizedBox(height: 20,),
+          QuickStart(),
+      
+        ],
+      ),
+    );
   }
 }

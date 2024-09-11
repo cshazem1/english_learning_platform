@@ -10,16 +10,19 @@ class QuickStart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 60,),
-        Text(
-          "Quick Start",style: AppStyles.styleBold28(context),
-        ),
-        const SizedBox(height: 10,),
-        const QuickStartListView(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 60,),
+          Text(
+            "Quick Start",style: AppStyles.styleBold22(context),
+          ),
+          const SizedBox(height: 10,),
+          const QuickStartListView(),
+        ],
+      ),
     );
   }
 }

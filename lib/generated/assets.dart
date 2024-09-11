@@ -7,6 +7,7 @@ class Assets {
   static const String imagesBook1 = 'assets/images/book1.png';
   static const String imagesClock = 'assets/images/clock.png';
   static const String imagesCountries1 = 'assets/images/countries1.png';
+  static const String imagesFolder = 'assets/images/folder.png';
   static const String imagesMagnifier = 'assets/images/magnifier.png';
   static const String imagesNote = 'assets/images/note.png';
   static const String imagesPen = 'assets/images/pen.png';

@@ -1,6 +1,9 @@
 import 'package:english_learning_platform/features/home/presentation/views/widgets/adaptive_layout.dart';
-import 'package:english_learning_platform/features/home/presentation/views/widgets/home_mobile_layout_view.dart';
+import 'package:english_learning_platform/features/home/presentation/views/widgets/custom_drawer.dart';
+import 'package:english_learning_platform/features/home/presentation/views/widgets/home_tablet_layout_view.dart';
 import 'package:english_learning_platform/features/home/presentation/views/widgets/home_web_layout_view.dart';
+import 'package:english_learning_platform/generated/assets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,19 +12,33 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar:MediaQuery.sizeOf(context).width < 600 ?  AppBar(
+backgroundColor: Color(0xff403752).withOpacity(0.3),
+
+     ):null,
+        drawer: Padding(
+            padding:  EdgeInsets.only(right:MediaQuery.sizeOf(context).width * 0.5,top: MediaQuery.sizeOf(context).width * 0.09),
+
+            child: const CustomDrawer()),
         body: Stack(
               children: [
          Shadow(color: Colors.white.withOpacity(0.2),padding: 0.04,),
-         Shadow(color: Colors.white.withOpacity(0.4),padding: 0.08,),
 
+
+                Shadow(color: Colors.white.withOpacity(0.4),padding: 0.08,),
+                Positioned(
+                    bottom: -50,
+                    right: -30,
+                    child: Image.asset(Assets.imagesFolder,width: 400,height: 400,)),
         Shadow(
           color:  const Color(0xffF1F3F8),
           padding: 0.16,
           child: AdaptiveLayout(
-              mobileLayout: (context) => const Text("data"),
-              tabletLayout: (context) => const HomeMobileLayoutView(),
+              mobileLayout: (context) => const HomeMobileLayout(),
+              tabletLayout: (context) => const HomeTabletLayoutView(),
               webLayout: (context) => const HomeWebLayoutView()),
         ),
+
               ],
             ));
   }

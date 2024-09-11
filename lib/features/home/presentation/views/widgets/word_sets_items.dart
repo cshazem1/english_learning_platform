@@ -39,7 +39,7 @@ class WordSetsItems extends StatelessWidget {
                   children: [
                     Image.asset(item.image),
                     ConstrainedBox(
-                      constraints: const BoxConstraints( maxHeight: 50),
+                      constraints:  BoxConstraints( maxHeight: 50),
                       child: Container(
                         padding: const EdgeInsets.all(5),
                         margin: const EdgeInsets.only(top: 15),
@@ -47,10 +47,8 @@ class WordSetsItems extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             color: Colors.white.withOpacity(.4)),
-                        child: Center(
-                          child: SvgPicture.asset(
-                            Assets.svgHeart,
-                          ),
+                        child: SvgPicture.asset(
+                          Assets.svgHeart,width: MediaQuery.sizeOf(context).width * 0.01,
                         ),
                       ),
                     )
@@ -59,6 +57,7 @@ class WordSetsItems extends StatelessWidget {
               ),
 
               FittedBox(
+                fit: BoxFit.scaleDown,
                 child: Text(
                   item.title,
                   style: AppStyles.styleBold18(context).copyWith(color: Colors.white),

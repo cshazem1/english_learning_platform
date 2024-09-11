@@ -20,7 +20,7 @@ shrinkWrap: true,
       itemCount:items.length ,
       itemBuilder: (context, index) {
         return  Padding(
-          padding:  EdgeInsets.only(left: (index != 0 ? 20.0 : 0), right: 20.0),
+          padding:  EdgeInsets.only(left: (index != 0 ? 15.0 : 0), right: 10.0),
           child: QuickStartItems(item: items[index]),);
       },
     );

@@ -39,7 +39,7 @@ class InActiveDrawerItem extends StatelessWidget {
               ),
             ),
           ),
-          leading: SvgPicture.asset(
+          leading:drawerItems.image==''?null: SvgPicture.asset(
             drawerItems.image,colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
           )),
     );

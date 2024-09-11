@@ -13,7 +13,7 @@ class Statistics extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 16,),
+        const SizedBox(height: 16,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -44,9 +44,7 @@ class Statistics extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        ConstrainedBox(
-            constraints: const BoxConstraints(minHeight: 100,maxHeight: 200),
-            child: StatisticsChart())
+        const StatisticsChart()
       ],
     );
   }
