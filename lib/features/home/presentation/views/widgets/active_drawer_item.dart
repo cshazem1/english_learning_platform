@@ -23,9 +23,12 @@ class ActiveDrawerItem extends StatelessWidget {
               bottomLeft: Radius.circular(20), topLeft: Radius.circular(20))),
       child: ListTile(
           contentPadding: EdgeInsets.zero,
-          title: Text(
-            drawerItems.title,
-            style: AppStyles.styleMedium14.copyWith(color: Colors.black),
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              drawerItems.title,
+              style: AppStyles.styleMedium14(context).copyWith(color: Colors.black),
+            ),
           ),
           leading: SvgPicture.asset(
             drawerItems.image,

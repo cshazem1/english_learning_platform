@@ -9,18 +9,19 @@ class DrawerListViewItems extends StatefulWidget {
     super.key,
   });
 
-
   @override
   State<DrawerListViewItems> createState() => _DrawerListViewItemsState();
 }
- final List<DrawerItemModels> drawerItems = [
+
+final List<DrawerItemModels> drawerItems = [
   DrawerItemModels(title: "", image: ""),
   DrawerItemModels(title: "Dashboard", image: Assets.svgDashBoard),
   DrawerItemModels(title: "Explore", image: Assets.svgExplore),
   DrawerItemModels(title: "Dictionary", image: Assets.svgBooks),
   DrawerItemModels(title: "Schedule", image: Assets.svgDate),
-  DrawerItemModels(title: "", image:""),
+  DrawerItemModels(title: "", image: ""),
 ];
+
 class _DrawerListViewItemsState extends State<DrawerListViewItems> {
   int currentIndex = 1;
 
@@ -29,27 +30,23 @@ class _DrawerListViewItemsState extends State<DrawerListViewItems> {
     return SliverList.builder(
       itemCount: drawerItems.length,
       itemBuilder: (context, index) {
-        return DrawerItem(
-          intTopPosition: currentIndex == index - 1
-              ? 0
-              : currentIndex == index+1
-                  ? 1
-                  : -1,
+        return GestureDetector(
           onTap: () {
-
-print("$index  $currentIndex ");
-            currentIndex=  index!=0&&index!=drawerItems.length-1? index: currentIndex = currentIndex;
-              setState(() {
-
-
-              });
-
-
-
-
-            },
-          drawerItems: drawerItems[index],
-          isActive: currentIndex == index,
+            print("$index  $currentIndex ");
+            currentIndex = index != 0 && index != drawerItems.length - 1
+                ? index
+                : currentIndex = currentIndex;
+            setState(() {});
+          },
+          child: DrawerItem(
+            intTopPosition: currentIndex == index - 1
+                ? 0
+                : currentIndex == index + 1
+                    ? 1
+                    : -1,
+            drawerItems: drawerItems[index],
+            isActive: currentIndex == index,
+          ),
         );
       },
     );

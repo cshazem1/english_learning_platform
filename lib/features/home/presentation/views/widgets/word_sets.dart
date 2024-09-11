@@ -15,7 +15,7 @@ class WordSets extends StatelessWidget {
       children: [
         Text(
           "Word Sets",
-          style: AppStyles.styleBold22,
+          style: AppStyles.styleBold22(context),
         ),
         const SizedBox(
           height: 20,

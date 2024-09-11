@@ -2,10 +2,14 @@
 class Assets {
   Assets._();
 
+  static const String imagesAvatar = 'assets/images/avatar.png';
   static const String imagesBook = 'assets/images/book.png';
+  static const String imagesBook1 = 'assets/images/book1.png';
   static const String imagesClock = 'assets/images/clock.png';
   static const String imagesCountries1 = 'assets/images/countries1.png';
   static const String imagesMagnifier = 'assets/images/magnifier.png';
+  static const String imagesNote = 'assets/images/note.png';
+  static const String imagesPen = 'assets/images/pen.png';
   static const String poppinsOFL = 'assets/fonts/poppins/OFL.txt';
   static const String poppinsPoppinsBlack = 'assets/fonts/poppins/Poppins-Black.ttf';
   static const String poppinsPoppinsBlackItalic = 'assets/fonts/poppins/Poppins-BlackItalic.ttf';

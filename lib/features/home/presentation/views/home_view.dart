@@ -9,20 +9,20 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: [
+              children: [
          Shadow(color: Colors.white.withOpacity(0.2),padding: 0.04,),
          Shadow(color: Colors.white.withOpacity(0.4),padding: 0.08,),
 
         Shadow(
-          color:  Color(0xffF1F3F8),
+          color:  const Color(0xffF1F3F8),
           padding: 0.16,
           child: AdaptiveLayout(
               mobileLayout: (context) => const Text("data"),
               tabletLayout: (context) => const Text("dsd"),
               webLayout: (context) => const HomeWebLayoutView()),
         ),
-      ],
-    ));
+              ],
+            ));
   }
 }
 

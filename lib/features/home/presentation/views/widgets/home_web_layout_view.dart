@@ -1,10 +1,9 @@
-import 'package:english_learning_platform/features/home/presentation/views/widgets/statistics.dart';
-import 'package:english_learning_platform/features/home/presentation/views/widgets/word_sets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
+import 'cardInfo_and_quickStart.dart';
 import 'custom_drawer.dart';
-import 'dash_board_header.dart';
+import 'header_and_words_and_statistics.dart';
 
 class HomeWebLayoutView extends StatelessWidget {
   const HomeWebLayoutView({
@@ -19,27 +18,16 @@ class HomeWebLayoutView extends StatelessWidget {
           child: CustomDrawer(),
         ),
         Expanded(
-          flex: 2,
-          child: Padding(
-            padding: EdgeInsets.only(top: 22.0, left: 22.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                DashBoardHeader(),
-                SizedBox(
-                  height: 20,
-                ),
-                Expanded(child: WordSets()),
-                Expanded(
-                    child: Statistics())
-              ],
-            ),
-          ),
+          flex: 3,
+          child: HeaderAndWordsAndStatistics(),
         ),
+        Expanded(
+            child: CardInfoAndQuickStart())
       ],
     );
   }
 }
+
+
 
 

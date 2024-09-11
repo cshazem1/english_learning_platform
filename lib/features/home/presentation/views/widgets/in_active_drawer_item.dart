@@ -29,9 +29,15 @@ class InActiveDrawerItem extends StatelessWidget {
       ),
       child: ListTile(
           contentPadding: EdgeInsets.zero,
-          title: Text(
-            drawerItems.title,
-            style: AppStyles.styleMedium14.copyWith(color: Colors.white),
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(minWidth: 1,minHeight: 1),
+              child: Text(
+                drawerItems.title,
+                style: AppStyles.styleMedium14(context).copyWith(color: Colors.white),
+              ),
+            ),
           ),
           leading: SvgPicture.asset(
             drawerItems.image,colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.srcIn),

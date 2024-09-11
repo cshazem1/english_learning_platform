@@ -61,7 +61,7 @@ class WordSetsItems extends StatelessWidget {
               FittedBox(
                 child: Text(
                   item.title,
-                  style: AppStyles.styleBold18.copyWith(color: Colors.white),
+                  style: AppStyles.styleBold18(context).copyWith(color: Colors.white),
                 ),
 
               ),
