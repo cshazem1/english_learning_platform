@@ -12,7 +12,7 @@ class QuickStartItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -21,9 +21,14 @@ class QuickStartItems extends StatelessWidget {
           Image.asset(item.image),
           const SizedBox(width: 20,),
           Column(children: [
-            Text(item.title,style: AppStyles.styleBold18(context).copyWith(color: Colors.black),),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+
+                child: Text(item.title,style: AppStyles.styleBold18(context).copyWith(color: Colors.black),)),
             const SizedBox(height: 5,),
-            Text(item.time,style: AppStyles.styleRegular14(context),),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(item.time,style: AppStyles.styleRegular14(context),)),
 
           ],)
         ],

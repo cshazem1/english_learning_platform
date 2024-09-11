@@ -19,10 +19,11 @@ class HomeWebLayoutView extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: HeaderAndWordsAndStatistics(),
+          child: SingleChildScrollView(child: HeaderAndWordsAndStatistics()),
         ),
+        SizedBox(width: 22,),
         Expanded(
-            child: CardInfoAndQuickStart())
+            child: SingleChildScrollView(child: CardInfoAndQuickStart()))
       ],
     );
   }

@@ -16,11 +16,11 @@ class QuickStartListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-
+shrinkWrap: true,
       itemCount:items.length ,
       itemBuilder: (context, index) {
         return  Padding(
-          padding:  EdgeInsets.only(left: (20+index*20), right: 20.0),
+          padding:  EdgeInsets.only(left: (index != 0 ? 20.0 : 0), right: 20.0),
           child: QuickStartItems(item: items[index]),);
       },
     );

@@ -44,7 +44,9 @@ class Statistics extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Expanded(child: StatisticsChart())
+        ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 100,maxHeight: 200),
+            child: StatisticsChart())
       ],
     );
   }

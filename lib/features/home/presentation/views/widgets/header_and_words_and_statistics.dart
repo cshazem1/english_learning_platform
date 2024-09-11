@@ -21,10 +21,9 @@ class HeaderAndWordsAndStatistics extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Expanded(child: WordSets()),
+          WordSets(),
           SizedBox(height: 8,),
-          Expanded(
-              child: Statistics()),
+          Statistics(),
           SizedBox(width: 8,)
         ],
       ),

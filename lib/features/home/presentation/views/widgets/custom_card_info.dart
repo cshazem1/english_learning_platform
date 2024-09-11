@@ -12,22 +12,20 @@ class CustomCardInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Expanded(
-          child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Positioned(
-                top: 100,
-                right: 0,
-                left: 0,
-                child: CustomCardItemInfo(),
-              ),
-              CustomImageInfo(),
-              SizedBox(
-                height: 22,
-              ),
-            ],
-          ),
+        Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Positioned(
+              top: 100,
+              right: 0,
+              left: 0,
+              child: CustomCardItemInfo(),
+            ),
+            CustomImageInfo(),
+            SizedBox(
+              height: 22,
+            ),
+          ],
         ),
       ],
     );

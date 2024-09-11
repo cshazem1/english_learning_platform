@@ -1,4 +1,5 @@
 import 'package:english_learning_platform/features/home/presentation/views/widgets/adaptive_layout.dart';
+import 'package:english_learning_platform/features/home/presentation/views/widgets/home_mobile_layout_view.dart';
 import 'package:english_learning_platform/features/home/presentation/views/widgets/home_web_layout_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,13 +19,25 @@ class HomeView extends StatelessWidget {
           padding: 0.16,
           child: AdaptiveLayout(
               mobileLayout: (context) => const Text("data"),
-              tabletLayout: (context) => const Text("dsd"),
+              tabletLayout: (context) => const HomeMobileLayoutView(),
               webLayout: (context) => const HomeWebLayoutView()),
         ),
               ],
             ));
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Shadow extends StatelessWidget {
  final double padding;

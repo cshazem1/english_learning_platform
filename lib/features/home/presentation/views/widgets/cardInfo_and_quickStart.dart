@@ -13,11 +13,12 @@ class CardInfoAndQuickStart extends StatelessWidget {
     return const Column(
 
       children: [
-        Expanded(child: CustomCardInfo()),
+        CustomCardInfo(),
         SizedBox(
-          height: 20,
+
+          height: 90,
         ),
-        Expanded(child: QuickStart())
+        QuickStart()
       ],
     );
   }

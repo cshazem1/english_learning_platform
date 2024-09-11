@@ -18,9 +18,7 @@ class QuickStart extends StatelessWidget {
           "Quick Start",style: AppStyles.styleBold28(context),
         ),
         const SizedBox(height: 10,),
-        const Expanded(
-          child: QuickStartListView(),
-        ),
+        const QuickStartListView(),
       ],
     );
   }
